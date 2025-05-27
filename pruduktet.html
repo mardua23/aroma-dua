@@ -1,138 +1,33 @@
 <!DOCTYPE html>
 <html lang="sq">
 <head>
-  <meta charset="UTF-8" />
-  <title>Produktet Tona - AromaDua</title>
+  <meta charset="UTF-8">
+  <title>Produktet Tona</title>
   <style>
-    body {
-      font-family: sans-serif;
-      background: #fff;
-      margin: 0;
-      padding: 0;
-      color: #333;
-    }
-    nav {
-      background: #ff6600;
-      padding: 10px;
-      text-align: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 16px;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .content {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 20px;
-      background: #f9f9f9;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      color: #ff6600;
-    }
-    ul.product-list {
-      list-style: none;
-      padding: 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    ul.product-list li {
-      background: white;
-      border-radius: 10px;
-      padding: 15px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      cursor: pointer;
-      transition: transform 0.2s;
-    }
-    ul.product-list li:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-    }
-    .product-name {
-      font-weight: bold;
-      font-size: 20px;
-      margin-bottom: 10px;
-    }
-    .product-price {
-      color: #ff6600;
-      font-weight: bold;
-      font-size: 18px;
-    }
-    .product-description {
-      margin-top: 10px;
-      font-style: italic;
-      color: #555;
-      display: none;
-    }
+    body { font-family: Arial; background: #f0f8ff; padding: 20px; }
+    .product { background: #fff; margin: 10px auto; padding: 20px; max-width: 600px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    h1, h2 { text-align: center; }
+    a { text-decoration: none; color: #4CAF50; }
   </style>
-  <script>
-    // Kur klikohet një produkt, shfaq përshkrimin me cmim
-    function toggleDescription(event) {
-      const desc = event.currentTarget.querySelector('.product-description');
-      if(desc.style.display === 'block') {
-        desc.style.display = 'none';
-      } else {
-        desc.style.display = 'block';
-      }
-    }
-  </script>
 </head>
 <body>
-
-<nav>
-  <a href="index.html">Kryefaqja</a>
-  <a href="rrethnesh.html">Rreth Nesh</a>
-  <a href="produktet.html">Produktet Tona</a>
-  <a href="stafi.html">Kontaktoni Stafin</a>
-  <a href="na-telefononi.html">Na Telefononi</a>
-</nav>
-
-<div class="content">
-  <h2>Produktet Tona</h2>
-  <ul class="product-list">
-    <li onclick="toggleDescription(event)">
-      <div class="product-name">Arma Makinash</div>
-      <div class="product-description">Produkt për mirëmbajtje dhe aromatizim makinash. Çmimi: 5 euro</div>
-      <div class="product-price">5 euro</div>
-    </li>
-    <li onclick="toggleDescription(event)">
-      <div class="product-name">Lecka për Pastrim</div>
-      <div class="product-description">Lecka speciale për pastrim të kujdesshëm. Çmimi: 5 euro</div>
-      <div class="product-price">5 euro</div>
-    </li>
-    <li onclick="toggleDescription(event)">
-      <div class="product-name">Fshese e Vogël për të Fshirë</div>
-      <div class="product-description">Fshesë kompakte për pastrimin e sipërfaqeve të vogla. Çmimi: 5 euro</div>
-      <div class="product-price">5 euro</div>
-    </li>
-    <li onclick="toggleDescription(event)">
-      <div class="product-name">Letër për të Fshirë Pasqyrat</div>
-      <div class="product-description">Letër e përshtatshme për pastrimin e pasqyrave. Çmimi: 5 euro</div>
-      <div class="product-price">5 euro</div>
-    </li>
-    <li onclick="toggleDescription(event)">
-      <div class="product-name">Mbrojtëse për Timonin</div>
-      <div class="product-description">Mbrojtëse elegante dhe funksionale për timonin e makinës. Çmimi: 5 euro</div>
-      <div class="product-price">5 euro</div>
-    </li>
-    <li onclick="toggleDescription(event)">
-      <div class="product-name">Mbrojtëse për Sendilët</div>
-      <div class="product-description">Mbrojtëse të forta dhe të bukura për sediljet. Çmimi: 5 euro</div>
-      <div class="product-price">5 euro</div>
-    </li>
-  </ul>
-</div>
-
+  <h1>Produktet Tona</h1>
+  <div class="product">
+    <h2>Aroma makinash</h2>
+    <p>Çmimi: 5 euro</p>
+  </div>
+  <div class="product">
+    <h2>Lecka pastrimi</h2>
+    <p>Çmimi: 4 euro</p>
+  </div>
+  <div class="product">
+    <h2>Fshesë pastrimi elektronike</h2>
+    <p>Çmimi: 16 euro</p>
+  </div>
+  <div class="product">
+    <h2>Spray për tapiceri</h2>
+    <p>Çmimi: 12 euro</p>
+  </div>
+  <p style="text-align:center;"><a href="index.html">← Kthehu te faqja kryesore</a></p>
 </body>
 </html>
