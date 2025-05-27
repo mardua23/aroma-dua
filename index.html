@@ -1,28 +1,29 @@
+
 <!DOCTYPE html>
 <html lang="sq">
 <head>
   <meta charset="UTF-8">
   <title>AromaDua</title>
   <style>
-    body {
+    body, html {
       margin: 0;
+      padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f0f0f0;
-      color: #333;
     }
     header {
-      background: #4CAF50;
+      background: rgba(0,0,0,0.6);
       color: white;
       padding: 20px;
-      text-align: center;
-      position: sticky;
+      position: absolute;
+      width: 100%;
+      z-index: 10;
       top: 0;
-      z-index: 100;
+      left: 0;
+      text-align: center;
     }
     header h1 {
       margin: 0;
       font-size: 2.5em;
-      letter-spacing: 2px;
     }
     nav {
       margin-top: 10px;
@@ -32,44 +33,30 @@
       text-decoration: none;
       color: white;
       font-weight: bold;
+    }
+    .hero-section {
       position: relative;
-    }
-    nav a::after {
-      content: '';
-      display: block;
-      width: 0;
-      height: 2px;
-      background: white;
-      transition: width 0.3s;
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-    }
-    nav a:hover::after {
       width: 100%;
-    }
-    .hero-image {
-      width: 100%;
-      height: 400px;
+      height: 100vh;
       background-image: url('https://source.unsplash.com/1600x900/?nature,car,road');
       background-size: cover;
       background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    main {
-      text-align: center;
-      padding: 50px 20px;
-    }
-    main img, main video {
-      max-width: 90%;
+    .hero-text {
+      background: rgba(0,0,0,0.5);
+      color: white;
+      padding: 30px;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      text-align: center;
     }
     footer {
       background: #4CAF50;
       color: white;
       text-align: center;
-      padding: 15px;
-      margin-top: 40px;
+      padding: 20px;
     }
     footer p {
       margin: 5px 0;
@@ -88,12 +75,12 @@
   </nav>
 </header>
 
-<div class="hero-image"></div>
-
-<main>
-  <h2>Mirë se vini te AromaDua</h2>
-  <p>Ofrojmë produkte të freskisë dhe pastërtisë për makinën tuaj.</p>
-</main>
+<div class="hero-section">
+  <div class="hero-text">
+    <h2>Mirë se vini te AromaDua</h2>
+    <p>Ofrojmë produkte të freskisë dhe pastërtisë për makinën tuaj.</p>
+  </div>
+</div>
 
 <footer>
   <p>Adresa: Tirana, Shqipëri</p>
