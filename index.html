@@ -7,7 +7,7 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to bottom, #f0f0f0, #fff);
+      background: #f0f0f0;
       color: #333;
     }
     header {
@@ -48,6 +48,13 @@
     nav a:hover::after {
       width: 100%;
     }
+    .hero-image {
+      width: 100%;
+      height: 400px;
+      background-image: url('https://source.unsplash.com/1600x900/?nature,car,road');
+      background-size: cover;
+      background-position: center;
+    }
     main {
       text-align: center;
       padding: 50px 20px;
@@ -81,10 +88,11 @@
   </nav>
 </header>
 
+<div class="hero-image"></div>
+
 <main>
   <h2>Mirë se vini te AromaDua</h2>
   <p>Ofrojmë produkte të freskisë dhe pastërtisë për makinën tuaj.</p>
-  <img src="https://source.unsplash.com/800x400/?car,fresh" alt="Foto AromaDua">
 </main>
 
 <footer>
