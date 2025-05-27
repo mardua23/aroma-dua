@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="sq">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>AromaDua</title>
   <style>
     body, html {
-      margin: 0;
-      padding: 0;
+      margin: 0; padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f0f0;
+      color: #333;
     }
     header {
-      background: rgba(0,0,0,0.6);
+      background: #4CAF50;
       color: white;
       padding: 20px;
-      position: absolute;
-      width: 100%;
-      z-index: 10;
-      top: 0;
-      left: 0;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
     header h1 {
       margin: 0;
@@ -29,36 +28,32 @@
     }
     nav a {
       margin: 0 15px;
-      text-decoration: none;
       color: white;
       font-weight: bold;
+      text-decoration: none;
     }
-    .hero-section {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      background-image: url('https://source.unsplash.com/1600x900/?nature,car,road');
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    nav a:hover {
+      text-decoration: underline;
     }
-    .hero-text {
-      background: rgba(0,0,0,0.5);
-      color: white;
-      padding: 30px;
-      border-radius: 10px;
+    main {
+      max-width: 900px;
+      margin: 30px auto;
       text-align: center;
+      padding: 0 10px;
+    }
+    main img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
     footer {
       background: #4CAF50;
       color: white;
       text-align: center;
       padding: 20px;
-    }
-    footer p {
-      margin: 5px 0;
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -74,12 +69,11 @@
   </nav>
 </header>
 
-<div class="hero-section">
-  <div class="hero-text">
-    <h2>Mirë se vini te AromaDua</h2>
-    <p>Ofrojmë produkte të freskisë dhe pastërtisë për makinën tuaj.</p>
-  </div>
-</div>
+<main>
+  <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80" alt="Natyra dhe makinë në rrugë" />
+  <h2>Mirë se vini te AromaDua</h2>
+  <p>Ofrojmë produkte të freskisë dhe pastërtisë për makinën tuaj.</p>
+</main>
 
 <footer>
   <p>Adresa: Tirana, Shqipëri</p>
@@ -88,3 +82,4 @@
 
 </body>
 </html>
+
