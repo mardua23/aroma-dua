@@ -1,0 +1,11 @@
+<section id="kontaktoni-stafin" class="section-hidden">
+  <h2>Kontaktoni Stafin Tonë</h2>
+  <p>Ekipi ynë është gjithmonë gati t’ju ndihmojë!</p>
+  <form id="contactForm">
+    <input type="text" id="emri" name="emri" placeholder="Emri juaj" required />
+    <input type="email" id="email" name="email" placeholder="Emaili juaj" required />
+    <textarea id="mesazhi" name="mesazhi" placeholder="Shkruani mesazhin tuaj..." required></textarea>
+    <button type="submit">Dërgo mesazh</button>
+  </form>
+  <p id="formMessage" style="color: green; margin-top: 10px;"></p>
+</section>
