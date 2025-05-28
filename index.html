@@ -3,17 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <title>AromaDua</title>
-
-  <!-- Lidhu me CSS të jashtëm ose vendos këtë direkt -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <style>
     body, html {
-      margin: 0;
-      padding: 0;
+      margin: 0; padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #f0f0f0;
       color: #333;
     }
-
     header {
       background: #4CAF50;
       color: white;
@@ -23,37 +21,32 @@
       top: 0;
       z-index: 100;
     }
-
     header h1 {
       margin: 0;
-      font-size: 2.2em;
+      font-size: 2em;
     }
-
     nav {
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 10px;
     }
-
     nav a {
-      margin: 10px 15px;
+      margin: 5px 10px;
       color: white;
       font-weight: bold;
       text-decoration: none;
       white-space: nowrap;
     }
-
     nav a:hover {
       text-decoration: underline;
     }
-
-    main, section.more-info {
+    main {
       max-width: 900px;
       margin: 30px auto;
       text-align: center;
       padding: 0 10px;
     }
-
     main img {
       width: 100%;
       max-height: 400px;
@@ -61,7 +54,12 @@
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
-
+    section {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 10px;
+      text-align: center;
+    }
     footer {
       background: #4CAF50;
       color: white;
@@ -69,17 +67,11 @@
       padding: 20px;
       margin-top: 40px;
     }
-
-    /* Për telefon, thyerja vertikale */
+    /* Responsive */
     @media (max-width: 600px) {
       nav {
         flex-direction: column;
         align-items: center;
-      }
-
-      nav a {
-        margin: 8px 0;
-        font-size: 1.1em;
       }
     }
   </style>
@@ -102,19 +94,11 @@
   <p>Ofrojmë produkte të freskisë dhe pastërtisë për makinën tuaj.</p>
 </main>
 
-<section class="more-info">
-  <h2>Pse të na zgjidhni ne?</h2>
-  <p>Ne përdorim vetëm produkte organike dhe teknologji moderne për t'u siguruar që makina juaj të jetë gjithmonë e pastër dhe e freskët.</p>
-  <p>Ekipi ynë është i trajnuar dhe i dedikuar për t'ju ofruar shërbimin më të mirë të mundshëm.</p>
-  <p>Gjithashtu, kemi oferta speciale dhe program besnikërie për klientët tanë.</p>
-</section>
-
 <footer>
   <p>Adresa: Tirana, Shqipëri</p>
   <p>Tel: +355 69 123 4567 | Email: info@aromadua.com</p>
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
 
