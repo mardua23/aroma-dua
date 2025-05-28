@@ -4,11 +4,9 @@
   <meta charset="UTF-8" />
   <title>AromaDua</title>
 
-  <!-- Lidhje me file CSS të jashtëm -->
- <link rel="stylesheet" href="style.css">
+  <!-- Lidhje me file CSS të jashtëm nëse do -->
+  <link rel="stylesheet" href="style.css">
 
-
-  <!-- Nëse do e vendosësh CSS brenda në këtë file, përdor këtë tag: -->
   <style>
     body, html {
       margin: 0; padding: 0;
@@ -54,6 +52,26 @@
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
+    /* Stil për seksionin e ri */
+    .more-info {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 10px;
+      text-align: center;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .more-info h2 {
+      color: #4CAF50;
+      margin-bottom: 15px;
+    }
+    .more-info p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+      color: #555;
+      margin-bottom: 15px;
+    }
     footer {
       background: #4CAF50;
       color: white;
@@ -82,10 +100,18 @@
   <p>Ofrojmë produkte të freskisë dhe pastërtisë për makinën tuaj.</p>
 </main>
 
+<section class="more-info">
+  <h2>Pse të na zgjidhni ne?</h2>
+  <p>Ne përdorim vetëm produkte organike dhe teknologji moderne për t'u siguruar që makina juaj të jetë gjithmonë e pastër dhe e freskët.</p>
+  <p>Ekipi ynë është i trajnuar dhe i dedikuar për t'ju ofruar shërbimin më të mirë të mundshëm.</p>
+  <p>Gjithashtu, kemi oferta speciale dhe program besnikërie për klientët tanë.</p>
+</section>
+
 <footer>
   <p>Adresa: Tirana, Shqipëri</p>
   <p>Tel: +355 69 123 4567 | Email: info@aromadua.com</p>
 </footer>
+
 <script src="script.js"></script>
 </body>
 </html>
