@@ -4,50 +4,128 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AromaDua</title>
-
-  <link rel="stylesheet" href="style.css" />
-  <!-- Ikona nga Font Awesome për vizat -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-pb3/JZ6X+OZqk1h2ZL8uEzJ5Gw3XkzOkQx5B0jUq5Pd6v2xQzXk9fCmIQkSQxC92kNULbAQKDX6sFZ+KY4hKg=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
+  <style>
+    body, html {
+      margin: 0; padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f0f0;
+      color: #333;
+    }
+    header {
+      background: #4CAF50;
+      color: white;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8em;
+    }
+    /* Hamburger icon */
+    .menu-icon {
+      display: none;
+      cursor: pointer;
+      flex-direction: column;
+      width: 25px;
+      height: 20px;
+      justify-content: space-between;
+    }
+    .menu-icon div {
+      height: 3px;
+      background: white;
+      border-radius: 2px;
+    }
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+    nav a {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+    /* Responsive: kur ekran është i vogël, fsheh menu-n dhe trego ikonën */
+    @media (max-width: 700px) {
+      nav {
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: #4CAF50;
+        flex-direction: column;
+        width: 200px;
+        border-radius: 6px;
+        display: none;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      }
+      nav.show {
+        display: flex;
+      }
+      .menu-icon {
+        display: flex;
+      }
+    }
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      text-align: center;
+      padding: 0 10px;
+    }
+    main img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    footer {
+      background: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
 
 <header>
   <h1>AromaDua</h1>
-  <nav class="menu">
-    <a href="rrethnesh.html"><i class="fas fa-info-circle"></i> RRETH NESH</a>
-    <a href="produktet.html"><i class="fas fa-car"></i> PRODUKTET TONA</a>
-    <a href="kontaktoni-stafin.html"><i class="fas fa-users"></i> KONTAKTONI STAFIN</a>
-    <a href="telefononi.html"><i class="fas fa-phone"></i> NA TELEFONONI</a>
+
+  <div class="menu-icon" id="menu-icon" aria-label="Menu" role="button" tabindex="0">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <nav id="menu">
+    <a href="rrethnesh.html">RRETH NESH</a>
+    <a href="produktet.html">PRODUKTET TONA</a>
+    <a href="kontaktoni-stafin.html">KONTAKTONI STAFIN</a>
+    <a href="telefononi.html">NA TELEFONONI</a>
   </nav>
 </header>
 
 <main>
-  <img
-    src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80"
-    alt="Natyra dhe makinë në rrugë"
-  />
+  <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80" alt="Natyra dhe makinë në rrugë" />
   <h2>Mirë se vini te AromaDua</h2>
   <p>Ofrojmë produkte të freskisë dhe pastërtisë për makinën tuaj.</p>
 
-  <section class="more-info">
+  <section class="more-info" style="max-width:900px; margin: 30px auto; padding: 0 10px; text-align: center;">
     <h2>Pse të na zgjidhni ne?</h2>
-    <p>
-      Ne përdorim vetëm produkte organike dhe teknologji moderne për t'u siguruar
-      që makina juaj të jetë gjithmonë e pastër dhe e freskët.
-    </p>
-    <p>
-      Ekipi ynë është i trajnuar dhe i dedikuar për t'ju ofruar shërbimin më të
-      mirë të mundshëm.
-    </p>
-    <p>
-      Gjithashtu, kemi oferta speciale dhe program besnikërie për klientët tanë.
-    </p>
+    <p>Ne përdorim vetëm produkte organike dhe teknologji moderne për t'u siguruar që makina juaj të jetë gjithmonë e pastër dhe e freskët.</p>
+    <p>Ekipi ynë është i trajnuar dhe i dedikuar për t'ju ofruar shërbimin më të mirë të mundshëm.</p>
+    <p>Gjithashtu, kemi oferta speciale dhe program besnikërie për klientët tanë.</p>
   </section>
 </main>
 
@@ -55,6 +133,22 @@
   <p>Adresa: Tirana, Shqipëri</p>
   <p>Tel: +355 69 123 4567 | Email: info@aromadua.com</p>
 </footer>
+
+<script>
+  const menuIcon = document.getElementById('menu-icon');
+  const menu = document.getElementById('menu');
+
+  menuIcon.addEventListener('click', () => {
+    menu.classList.toggle('show');
+  });
+
+  menuIcon.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      menu.classList.toggle('show');
+    }
+  });
+</script>
 
 </body>
 </html>
