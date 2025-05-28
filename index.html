@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <title>AromaDua</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
   <style>
     body, html {
       margin: 0; padding: 0;
@@ -15,31 +14,58 @@
     header {
       background: #4CAF50;
       color: white;
-      padding: 20px;
-      text-align: center;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       position: sticky;
       top: 0;
       z-index: 100;
     }
     header h1 {
       margin: 0;
-      font-size: 2em;
+      font-size: 1.8em;
     }
     nav {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 10px;
+      gap: 15px;
     }
     nav a {
-      margin: 5px 10px;
       color: white;
       font-weight: bold;
       text-decoration: none;
-      white-space: nowrap;
     }
     nav a:hover {
       text-decoration: underline;
+    }
+    .menu-icon {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .menu-icon div {
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 4px 0;
+      transition: 0.4s;
+    }
+    @media (max-width: 700px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: #4CAF50;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+      }
+      nav.show {
+        display: flex;
+      }
+      .menu-icon {
+        display: flex;
+      }
     }
     main {
       max-width: 900px;
@@ -54,12 +80,6 @@
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
-    section {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 0 10px;
-      text-align: center;
-    }
     footer {
       background: #4CAF50;
       color: white;
@@ -67,20 +87,18 @@
       padding: 20px;
       margin-top: 40px;
     }
-    /* Responsive */
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
   </style>
 </head>
 <body>
 
 <header>
   <h1>AromaDua</h1>
-  <nav>
+  <div class="menu-icon" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <nav id="nav-menu">
     <a href="rrethnesh.html">RRETH NESH</a>
     <a href="produktet.html">PRODUKTET TONA</a>
     <a href="stafi.html">KONTAKTONI STAFIN</a>
@@ -98,6 +116,13 @@
   <p>Adresa: Tirana, Shqipëri</p>
   <p>Tel: +355 69 123 4567 | Email: info@aromadua.com</p>
 </footer>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('nav-menu');
+    menu.classList.toggle('show');
+  }
+</script>
 
 </body>
 </html>
